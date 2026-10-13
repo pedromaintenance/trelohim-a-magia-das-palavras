@@ -1,5 +1,5 @@
 /* Arquivos locais, disponíveis offline após primeira visita com conexão. */
-const VERSION='trelohim-jrep-v1';
+const VERSION='trelohim-jrep-v2';
 const ASSETS=['./','./index.html','./style.css','./content.js','./game.js','./manifest.webmanifest','./icons/icon-192.png','./icons/icon-512.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(VERSION).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()));
